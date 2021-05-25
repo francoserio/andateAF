@@ -19,13 +19,15 @@ def job():
     
     api = tweepy.API(auth)
     api.update_status("Faltan " + str( diasQueFaltanDeMandato ) + " días para que termine el gobierno de Alberto Fernández. Ya pasó el " + str( percentageDone ) + "% de su mandato.")
+    # print(str( percentageDone ))
+    # print(str( diasQueFaltanDeMandato ))
     return
 
-schedule.every().day.at("09:00").do(job)
+schedule.every().day.at("23:00").do(job)
 
 while True:
     schedule.run_pending()
     time.sleep(60)
 
 # if __name__ == '__main__':
-#     job()
+    # job()
