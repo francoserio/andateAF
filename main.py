@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-def job():
+def job(request):
     finalMandato = arrow.Arrow(2023, 12, 10)
     comienzoMandato = arrow.Arrow(2019, 12, 10)
     diasQueFaltanDeMandato = ( finalMandato - arrow.now() ).days
