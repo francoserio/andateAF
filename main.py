@@ -1,8 +1,6 @@
 import os
 import arrow
 import tweepy
-import time
-import schedule
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -23,11 +21,5 @@ def job():
     # print(str( diasQueFaltanDeMandato ))
     return
 
-schedule.every().day.at("23:00").do(job)
-
-while True:
-    schedule.run_pending()
-    time.sleep(60)
-
-# if __name__ == '__main__':
-    # job()
+if __name__ == '__main__':
+    job()
