@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-def job(request):
+def sendTweet(request):
     finalMandato = arrow.Arrow(2023, 12, 10)
     comienzoMandato = arrow.Arrow(2019, 12, 10)
     diasQueFaltanDeMandato = ( finalMandato - arrow.now() ).days
@@ -20,6 +20,3 @@ def job(request):
     # print(str( percentageDone ))
     # print(str( diasQueFaltanDeMandato ))
     return
-
-if __name__ == '__main__':
-    job()
