@@ -16,6 +16,6 @@ def sendTweet(request):
     auth.set_access_token(os.getenv('TWITTER_ACCESS_TOKEN_KEY'), os.getenv('TWITTER_ACCESS_TOKEN_SECRET'))
     
     api = tweepy.API(auth)
-    message = "Faltan " + str( diasQueFaltanDeMandato ) + " días para que termine el gobierno de Alberto Fernández. Ya pasó el " + str( percentageDone ) + "% de su mandato. #ElPeorGobiernoDeLaHistoria"
+    message = "Faltan " + str( diasQueFaltanDeMandato ) + " días para que termine el gobierno de Alberto Fernández. Ya pasó el " + str( percentageDone ) + "% de su mandato."
     api.update_status(message)
     return 'tweetSent'
