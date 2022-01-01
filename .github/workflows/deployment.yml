@@ -1,4 +1,4 @@
-name: GCloud Storage CI
+name: GCP Cloud Function  CI
 
 on:
   workflow_dispatch:
