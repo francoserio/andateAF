@@ -23,4 +23,3 @@ jobs:
         with:
           name: "andateAF"
           runtime: "python39"
-          secret_environment_variables: "TWITTER_ACCESS_TOKEN_KEY=projects/samser/secrets/TWITTER_ACCESS_TOKEN_KEY/versions/1 TWITTER_ACCESS_TOKEN_SECRET=projects/samser/secrets/TWITTER_ACCESS_TOKEN_SECRET/versions/1 TWITTER_API_KEY=projects/samser/secrets/TWITTER_API_KEY/versions/1 TWITTER_API_SECRET=projects/samser/secrets/TWITTER_API_SECRET/versions/1 TWITTER_BEARER_TOKEN=projects/samser/secrets/TWITTER_BEARER_TOKEN/versions/1"
