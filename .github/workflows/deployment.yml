@@ -1,0 +1,23 @@
+name: GCloud Storage CI
+
+on:
+  workflow_dispatch:
+    branches: [master]
+
+jobs:
+  deployment:
+    permissions:
+      contents: "read"
+      id-token: "write"
+
+    steps:
+      - uses: actions/checkout@v2
+      - id: Auth
+        uses: google-github-actions/auth@v0
+        with:
+          credentials_json: ${{ secrets.SERVICE_KEY }}
+      - id: Deploy
+        uses: google-github-actions/deploy-cloud-functions@v0
+        with:
+          name: "andateAF"
+          runtime: "python39"
